@@ -15,7 +15,7 @@ namespace OrderApi.Application.DependencyInjection
             // Create Dependency Injection
             services.AddHttpClient<IOrderService, OrderService>(options =>
             {
-                options.BaseAddress = new Uri(config["ApiGateway:Base"]!);
+                options.BaseAddress = new Uri(config["ApiGateway:BaseAddress"]!);
                 options.Timeout = TimeSpan.FromSeconds(1);
             });
 
